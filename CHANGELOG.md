@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.11.0](https://github.com/starship/starship/compare/v1.10.3...v1.11.0) (2022-09-30)
+
+
+### Features
+
+* add user-defined color palette ([#4209](https://github.com/starship/starship/issues/4209)) ([d93074d](https://github.com/starship/starship/commit/d93074d0569db4bafb1788aa3f39136b734b5370))
+* **fish:** Enable left and right transience ([#4204](https://github.com/starship/starship/issues/4204)) ([06281c2](https://github.com/starship/starship/commit/06281c268d74a85d5b28e953bea251a2115f5568))
+* **schema:** deny unknown keys ([#4270](https://github.com/starship/starship/issues/4270)) ([b5d3d8f](https://github.com/starship/starship/commit/b5d3d8fcf331cdff6d0e687dcdbac77351731475))
+
+
+### Bug Fixes
+
+* **directory:** don't strip duplicate directory names twice ([#4295](https://github.com/starship/starship/issues/4295)) ([801fbab](https://github.com/starship/starship/commit/801fbab720e1bb94c32bb1aa10966a0637a10e63))
+* **pwsh:** avoid potential deadlock in init ([#4335](https://github.com/starship/starship/issues/4335)) ([fd55397](https://github.com/starship/starship/commit/fd5539796f7a2b3750d1889b55a563d84b628bee))
+
 ## [1.10.3](https://github.com/starship/starship/compare/v1.10.2...v1.10.3) (2022-09-07)
 
 
