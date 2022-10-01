@@ -834,6 +834,7 @@
         "detect_folders": [],
         "disabled": true,
         "format": "[$symbol$context( \\($namespace\\))]($style) in ",
+        "only_kubeconfig": false,
         "style": "cyan bold",
         "symbol": "☸ ",
         "user_aliases": {}
@@ -3655,6 +3656,10 @@
         },
         "disabled": {
           "default": true,
+          "type": "boolean"
+        },
+        "only_kubeconfig": {
+          "default": false,
           "type": "boolean"
         },
         "context_aliases": {

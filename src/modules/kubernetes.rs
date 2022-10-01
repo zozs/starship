@@ -119,6 +119,10 @@ pub fn module<'a>(context: &'a Context) -> Option<Module<'a>> {
         return None;
     };
 
+    if config.only_kubeconfig && context.get_env("KUBECONFIG").is_none() {
+        return None;
+    }
+
     // If we have some config for doing the directory scan then we use it but if we don't then we
     // assume we should treat it like the module is enabled to preserve backward compatability.
     let have_scan_config = !(config.detect_files.is_empty()
