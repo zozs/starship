@@ -238,15 +238,6 @@ impl<'a> Context<'a> {
         disabled == Some(true)
     }
 
-    /// Return whether the specified custom module has a `disabled` option set to true.
-    /// If it doesn't exist, `None` is returned.
-    pub fn is_custom_module_disabled_in_config(&self, name: &str) -> Option<bool> {
-        let config = self.config.get_custom_module_config(name)?;
-        let disabled = Some(config).and_then(|table| table.as_table()?.get("disabled")?.as_bool());
-
-        Some(disabled == Some(true))
-    }
-
     // returns a new ScanDir struct with reference to current dir_files of context
     // see ScanDir for methods
     pub fn try_begin_scan(&'a self) -> Option<ScanDir<'a>> {
@@ -656,11 +647,12 @@ pub enum Shell {
 }
 
 /// Which kind of prompt target to print (main prompt, rprompt, ...)
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum Target {
     Main,
     Right,
     Continuation,
+    Profile(String),
 }
 
 /// Properties as passed on from the shell as arguments
